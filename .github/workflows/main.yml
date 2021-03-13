@@ -40,9 +40,8 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         SOURCE_DIR: "dist"
     - uses: awact/cloudfront-action@master
-      with:
-        SOURCE_PATH: './'
+      env:
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: ${{ secrets.AWS_REGION }}
-        DISTRIBUTION_ID: EHC1WB72E68ZO
+        DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
